@@ -27,9 +27,11 @@
     
 ## Structure of controller.cpp
    ### devide the base_scan data into 180 pieces and choose 3 ranges and take the minimum
-        Here, I divided the data into 180 pieces to simulate a 180 degree angle. Then it will be ease to choose the specific angle range that I desired. Finally I chose a range set of 36->72, 85->95 and 108->144.
-        The pseudo code for choosing them is:
-while: index<720
+   Here, I divided the data into 180 pieces to simulate a 180 degree angle.
+   Then it will be ease to choose the specific angle range that I desired. 
+   Finally I chose a range set of 36->72, 85->95 and 108->144.
+   ### The pseudo code for choosing them is:
+     while: index<720
     if 36*4<=index<72*4
             if ranges[index] < minimum_fleft
                     minimum_fleft = ranges[index]
@@ -57,14 +59,13 @@ In order to control the speed of robot, there is a global variable which works a
    'r' is for placing the robot at the initial point
    
    ### pseudo code
-
-while true:
-    cmmd = get_a_key()
-    if cmmd == 'w'
+    while true:
+      cmmd = get_a_key()
+      if cmmd == 'w'
             send 'w' to speed_control service
-    if cmmd == 's'
+      if cmmd == 's'
             send 's' to speed_control service
-    if cmmd == 'r'
+      if cmmd == 'r'
             call reset_positions service
             
     
