@@ -32,13 +32,13 @@
    Finally I chose a range set of 36->72, 85->95 and 108->144.
    ### The pseudo code for choosing them is:
      while: index<720
-    if 36*4<=index<72*4
+       if 36*4<=index<72*4
             if ranges[index] < minimum_fleft
                     minimum_fleft = ranges[index]
-    if 85*4<=index<95*4
+       if 85*4<=index<95*4
             if ranges[index] < minimum_front
                     minimum_front = ranges[index]
-    if 36*4<=index<72*4
+       if 36*4<=index<72*4
             if ranges[index] < minimum_fright
                     minimum_fright = ranges[index]
 Now, minimum_fleft,minimum_front,minimum_fright stores the nearest object in those three directions.
