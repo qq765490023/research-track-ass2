@@ -6,7 +6,8 @@
   ### Here, compiles those nodes
     1. enter the directory of your ROS-workspace
     2. run: cd src
-    3. run: git clone $(url of this directory)
+    3. run: git clone git@github.com:qq765490023/research-track-ass2.git
+    #### pull all the files inside /research-track-ass2 to current /src directory
     4. run: cd ..
     5. run catkin_make on  ROS-workspace to build those nodes
     *************************************************************
